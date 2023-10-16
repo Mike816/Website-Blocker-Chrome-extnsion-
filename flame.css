@@ -1,0 +1,36 @@
+#flameEffect {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: all 1s ease;
+    position: relative;
+    margin: auto;
+  }
+  
+  #flameEffect.burning {
+    background-color: orange;
+    box-shadow: 0 0 50px 20px orange;
+  }
+  
+  #flameEffect.burning::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, transparent, yellow);
+    opacity: 0.5;
+  }
+  
+  #flameEffect.burning::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    background: linear-gradient(to bottom, transparent, red);
+    opacity: 0.5;
+  }
+  
